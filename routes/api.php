@@ -8,6 +8,7 @@ use App\Http\Controllers\Api\AdminController;
 Route::get('/ruangan', [RuanganController::class, 'index']);
 Route::get('/ruangan/{nama}/booked', [RuanganController::class, 'bookedSlots']);
 Route::post('/booking', [BookingController::class, 'store']);
+Route::get('/ruangan/{nama}/booked', [RuanganController::class, 'bookedSlots']);
 
 Route::post('/login', [AdminController::class, 'login']);
 Route::get('/admin/bookings', [AdminController::class, 'index']);
