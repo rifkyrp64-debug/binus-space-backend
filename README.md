@@ -1,59 +1,254 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# 🏫 Binus Space — Sistem Peminjaman Ruangan Kampus
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+> Platform booking ruangan kelas dan laboratorium kampus secara online untuk mahasiswa dan dosen Binus University.
 
-## About Laravel
+![Status](https://img.shields.io/badge/status-active-success)
+![Backend](https://img.shields.io/badge/backend-Laravel%2011-red)
+![Frontend](https://img.shields.io/badge/frontend-React-blue)
+![Database](https://img.shields.io/badge/database-MySQL-orange)
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+---
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## 📋 Deskripsi
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+**Binus Space** adalah aplikasi web yang memudahkan mahasiswa dan dosen untuk meminjam ruangan kelas atau laboratorium kampus secara mandiri dan online. Sebelumnya, proses peminjaman ruangan dilakukan secara manual yang memakan waktu dan rawan terjadi bentrok jadwal. Aplikasi ini menyederhanakan proses tersebut menjadi beberapa langkah digital yang cepat dan transparan.
 
-## Learning Laravel
+### Masalah yang Diselesaikan
+- Proses peminjaman ruangan manual yang lambat dan tidak efisien
+- Sulitnya mengecek ketersediaan ruangan secara real-time
+- Tidak ada sistem persetujuan yang terpusat dan transparan
+- Rawan terjadi double-booking pada satu ruangan
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+### Solusi
+Sistem booking online dengan alur pengajuan yang jelas, dilengkapi panel admin untuk menyetujui atau menolak permohonan, sehingga peminjaman ruangan menjadi terorganisir dan dapat dilacak.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+---
 
-## Laravel Sponsors
+## ✨ Fitur Utama
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+| Fitur | Deskripsi |
+|-------|-----------|
+| 🔍 **Cek Ketersediaan** | Lihat daftar ruangan dengan pencarian dan filter berdasarkan kategori (Kelas/Lab) |
+| 📅 **Booking Jadwal** | Ajukan peminjaman ruangan dengan memilih tanggal, waktu, dan mengisi data pemohon |
+| ✅ **Approval System** | Admin dapat menyetujui atau menolak permohonan melalui dashboard khusus |
+| 🔐 **Login Admin** | Akses panel admin yang terproteksi untuk mengelola persetujuan |
 
-### Premium Partners
+---
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+## 🛠️ Teknologi yang Digunakan
 
-## Contributing
+### Frontend
+- **React** — library JavaScript untuk membangun antarmuka
+- **Tailwind CSS** — styling utility-first
+- **Axios** — HTTP client untuk komunikasi dengan API
+- **Lucide React** — ikon
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+### Backend
+- **Laravel 11** — framework PHP untuk REST API
+- **Eloquent ORM** — manajemen database
+- **MySQL** — basis data relasional
 
-## Code of Conduct
+### Tools
+- **Git & GitHub** — version control
+- **Composer** — package manager PHP
+- **NPM** — package manager JavaScript
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+---
 
-## Security Vulnerabilities
+## 📦 Struktur Repository
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+Proyek ini dibagi menjadi dua repository terpisah (prinsip *separation of concerns*):
 
-## License
+- **binus-space-frontend** — antarmuka pengguna (React)
+- **binus-space-backend** — REST API dan logika bisnis (Laravel)
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+---
+
+## 🚀 Cara Instalasi
+
+### Prasyarat
+Pastikan sudah terinstall:
+- PHP 8.2+ dan Composer
+- Node.js dan NPM
+- MySQL (via XAMPP/Laragon)
+
+### 1. Setup Backend (Laravel)
+
+```bash
+# Clone repository backend
+git clone https://github.com/rifkyrp64-debug/binus-space-backend.git
+cd binus-space-backend
+
+# Install dependencies
+composer install
+
+# Salin file environment
+cp .env.example .env
+
+# Generate application key
+php artisan key:generate
+```
+
+Edit file `.env`, sesuaikan konfigurasi database:
+```env
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=binus_space
+DB_USERNAME=root
+DB_PASSWORD=
+
+ADMIN_EMAIL=admin@binus.ac.id
+ADMIN_PASSWORD=admin123
+```
+
+Buat database `binus_space` di phpMyAdmin, lalu jalankan migration dan seeder:
+```bash
+php artisan migrate --seed
+php artisan serve
+```
+
+Backend akan berjalan di `http://localhost:8000`
+
+### 2. Setup Frontend (React)
+
+```bash
+# Clone repository frontend
+git clone https://github.com/rifkyrp64-debug/binus-space-frontend.git
+cd binus-space-frontend
+
+# Install dependencies
+npm install
+
+# Jalankan development server
+npm run dev
+```
+
+Frontend akan berjalan di `http://localhost:5173` (atau port yang ditampilkan)
+
+---
+
+## 📖 Cara Penggunaan
+
+### Untuk Pengguna (Mahasiswa/Dosen)
+
+1. **Buka halaman utama** — lihat informasi platform dan fitur yang tersedia
+2. **Klik "Booking Ruangan"** — masuk ke daftar ruangan
+3. **Cari & filter ruangan** — gunakan kolom pencarian atau filter kategori (Semua/Kelas/Lab)
+4. **Klik "Booking Sekarang"** pada ruangan yang diinginkan
+5. **Isi formulir booking** dalam 3 langkah:
+   - Langkah 1: Pilih tanggal dan waktu mulai
+   - Langkah 2: Isi nama, NIM/NIP, email, telepon, dan tujuan peminjaman
+   - Langkah 3: Konfirmasi data dan ajukan
+6. **Tunggu persetujuan** dari admin
+
+### Untuk Admin
+
+1. **Klik menu "Admin"** di navigasi
+2. **Login** menggunakan email dan password admin
+3. **Kelola permohonan** — lihat semua booking yang masuk
+4. **Filter berdasarkan status** — Semua/Menunggu/Disetujui/Ditolak
+5. **Setujui atau tolak** setiap permohonan yang berstatus "Menunggu"
+
+> **Kredensial Admin (default):**
+> Email: `admin@binus.ac.id`
+> Password: `admin123`
+
+---
+
+## 🔌 Dokumentasi API
+
+| Method | Endpoint | Deskripsi |
+|--------|----------|-----------|
+| `GET` | `/api/ruangan` | Mengambil daftar semua ruangan |
+| `GET` | `/api/ruangan/{nama}/booked` | Mengambil jadwal yang sudah disetujui untuk ruangan tertentu |
+| `POST` | `/api/booking` | Membuat permohonan booking baru |
+| `POST` | `/api/login` | Autentikasi admin |
+| `GET` | `/api/admin/bookings` | Mengambil semua data booking (admin) |
+| `PUT` | `/api/admin/bookings/{id}/status` | Memperbarui status booking (approved/rejected) |
+
+### Contoh Request Booking
+```json
+POST /api/booking
+{
+  "nama": "Ahmad Fauzi",
+  "nim": "2301234567",
+  "email": "ahmad@binus.ac.id",
+  "telepon": "081234567890",
+  "fasilitas_id": "Ruang Kelas 301",
+  "tanggal": "2026-06-20",
+  "waktu_mulai": "09:00",
+  "durasi": 2,
+  "tujuan": "Presentasi Proyek Akhir"
+}
+```
+
+---
+
+## 🧪 Testing
+
+Backend dilengkapi unit test menggunakan PHPUnit untuk memastikan reliabilitas API:
+
+```bash
+php artisan test
+```
+
+Test mencakup: pengambilan data ruangan, pembuatan booking, validasi input, persetujuan admin, dan autentikasi login.
+
+---
+
+## 🗄️ Struktur Database
+
+### Tabel `ruangan`
+| Kolom | Tipe | Keterangan |
+|-------|------|------------|
+| id | bigint | Primary key |
+| nama | string | Nama ruangan |
+| kapasitas | integer | Kapasitas orang |
+| gedung | string | Gedung |
+| lantai | integer | Lantai |
+
+### Tabel `bookings`
+| Kolom | Tipe | Keterangan |
+|-------|------|------------|
+| id | bigint | Primary key |
+| nama | string | Nama pemohon |
+| nim | string | NIM/NIP pemohon |
+| email | string | Email pemohon |
+| telepon | string | Nomor telepon |
+| fasilitas_id | string | Nama ruangan yang dipinjam |
+| tanggal | date | Tanggal peminjaman |
+| waktu_mulai | string | Waktu mulai (format 24 jam) |
+| durasi | integer | Durasi dalam jam |
+| tujuan | text | Tujuan peminjaman |
+| status | enum | pending / approved / rejected |
+
+---
+
+## 🔮 Pengembangan Selanjutnya (Future Work)
+
+- Notifikasi email otomatis ke pemohon saat status berubah (integrasi Laravel Mail + SMTP)
+- Fitur upload dokumen pendukung (surat izin)
+- Riwayat booking per pengguna
+- Autentikasi pengguna (bukan hanya admin)
+- Validasi otomatis untuk mencegah double-booking pada slot yang sama
+
+---
+
+## 👥 Tim Pengembang
+
+| Nama | NIM | Peran |
+|------|-----|-------|
+| _(Nama Anggota 1)_ | _(NIM)_ | _(Peran)_ |
+| _(Nama Anggota 2)_ | _(NIM)_ | _(Peran)_ |
+| _(Nama Anggota 3)_ | _(NIM)_ | _(Peran)_ |
+
+---
+
+## 📄 Lisensi
+
+Proyek ini dibuat untuk memenuhi tugas mata kuliah **COMP6100001 - Software Engineering**, Binus University.
+
+---
+
+_Dikembangkan dengan ❤️ oleh Tim Binus Space — 2026_
