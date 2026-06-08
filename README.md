@@ -239,7 +239,7 @@ Test mencakup: pengambilan data ruangan, pembuatan booking, validasi input, pers
 
 | Nama | NIM | Peran |
 |------|-----|-------|
-| _(Nama Anggota 1)_ | _(NIM)_ | _(Peran)_ |
+| _(Muhamad Rifki Perkasa)_ | _(2802479413)_ | _(UI/UX)_ |
 | _(Nama Anggota 2)_ | _(NIM)_ | _(Peran)_ |
 | _(Nama Anggota 3)_ | _(NIM)_ | _(Peran)_ |
 
