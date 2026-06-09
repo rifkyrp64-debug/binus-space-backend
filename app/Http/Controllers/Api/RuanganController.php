@@ -15,9 +15,10 @@ class RuanganController extends Controller
 
     public function bookedSlots($nama)
     {
-        $slots = Booking::where('fasilitas_id', $nama)
-            ->where('status', 'approved')
-            ->get(['tanggal', 'waktu_mulai', 'durasi']);
-        return response()->json($slots);
+    $slots = Booking::where('fasilitas_id', $nama)
+        ->where('status', 'approved')
+        ->whereDate('tanggal', '>=', now()->toDateString()) // hanya tanggal hari ini & ke depan
+        ->get(['tanggal', 'waktu_mulai', 'durasi']);
+    return response()->json($slots);
     }
 }
