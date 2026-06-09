@@ -23,4 +23,4 @@ RUN chmod -R 775 storage bootstrap/cache
 EXPOSE 8000
 
 # Saat container start: migrate + seed + jalankan server
-CMD php artisan migrate --force && php artisan db:seed --force && php artisan serve --host=0.0.0.0 --port=${PORT:-8000}
+CMD php artisan migrate:fresh --force && php artisan db:seed --force && php artisan serve --host=0.0.0.0 --port=${PORT:-8000}
