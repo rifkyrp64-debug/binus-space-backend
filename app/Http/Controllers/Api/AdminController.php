@@ -16,7 +16,16 @@ class AdminController extends Controller
     public function updateStatus(Request $request, $id)
     {
         $booking = Booking::findOrFail($id);
-        $booking->update(['status' => $request->status]);
+
+        $booking->status = $request->status;
+
+        // Kalau ditolak, simpan alasannya juga
+        if ($request->status === 'rejected') {
+            $booking->alasan_penolakan = $request->alasan_penolakan;
+        }
+
+        $booking->save();
+
         return response()->json($booking);
     }
 

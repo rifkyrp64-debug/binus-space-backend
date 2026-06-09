@@ -9,6 +9,6 @@ class Booking extends Model
     protected $fillable = [
         'nama', 'nim', 'email', 'telepon',
         'fasilitas_id', 'tanggal', 'waktu_mulai',
-        'durasi', 'tujuan', 'status'
+        'durasi', 'tujuan', 'status', 'alasan_penolakan'
     ];
 }
