@@ -239,9 +239,11 @@ Test mencakup: pengambilan data ruangan, pembuatan booking, validasi input, pers
 
 | Nama | NIM | Peran |
 |------|-----|-------|
-| _(Muhamad Rifki Perkasa)_ | _(2802479413)_ | _(UI/UX)_ |
-| _(Nama Anggota 2)_ | _(NIM)_ | _(Peran)_ |
-| _(Nama Anggota 3)_ | _(NIM)_ | _(Peran)_ |
+| _(Muhamad Rifki Perkasa)_ | _(2802479413)_ | _(Backend)_ |
+| _(Aria Rahmatanto Putro)_ | _(2802495032)_ | _(UI/UX)_ |
+| _(Charly Prayoga)_ | _(2802486904)_ | _(Laporan Dan Dokumentasi)_ |
+| _(Malvin Yonatan Muliawan)_ | _(2802480232)_ | _(UI/UX)_ |
+
 
 ---
 
